@@ -51,6 +51,7 @@ def main():
     reconstructions = model.predict(Xte)
     errors = np.mean((Xte - reconstructions) ** 2, axis=(1, 2))
     threshold = np.percentile(errors, 95)  # 95th percentile threshold
+    np.save(os.path.join(MODELS_DIR, "thermal_autoencoder_errors.npy"), errors)
 
     anomalies = np.where(errors > threshold)[0]
 
