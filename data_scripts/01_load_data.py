@@ -18,6 +18,7 @@ battery_df = pd.read_csv(battery_file)
 motor_df = pd.read_csv(motor_file)
 tele_df = pd.read_csv(tele_file)
 
+
 print("\nShapes:")
 print(f"Battery: {battery_df.shape}, Motor: {motor_df.shape}, Telemetry: {tele_df.shape}")
 
